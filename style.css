@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+  display: grid;
+  background-color: #191919;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.title {
+  width: min-content;
+  color: #fefefe;
+  font-size: 1.3em;
+}
+
+#startBtn {
+  width: 80px;
+  border: none;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fafafa;
+  background-color: #2e699e;
+  padding: 6px;
+  font-weight: 700;
+}
+
+#startBtn:disabled {
+  background-color: #eee;
+}
+
+.game {
+  position: relative;
+  margin-top: 50px;
+  padding: 1rem;
+  border-radius: 5px;
+  place-self: center;
+}
+
+.buttonContainer {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, auto);
+  transform: rotate(45deg);
+}
+
+.square {
+  border-radius: 5px;
+  width: 125px;
+  height: 125px;
+  cursor: pointer;
+}
+
+.square:active,
+.active {
+  filter: brightness(150%);
+}
+
+.red {
+  background-color: #e24a36;
+}
+
+.blue {
+  background-color: #0881e3;
+}
+
+.green {
+  background-color: #41cd72;
+}
+
+.yellow {
+  background-color: #fdd949;
+}
+
+.winner {
+  animation: spin 1s ease-in-out;
+}
+
+#round {
+  color: #efefef;
+  font-size: 1.1em;
+  z-index: 1000;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(180deg);
+  }
+}
